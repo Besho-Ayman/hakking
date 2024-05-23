@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختراق</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .hacked {
+            font-size: 2em;
+            animation: blink 1s step-end infinite;
+        }
+
+        .sending-data {
+            font-size: 1.5em;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 2s 2s forwards;
+        }
+
+        .loading-bar-container {
+            width: 80%;
+            background-color: grey;
+            border-radius: 10px;
+            margin-top: 20px;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeIn 2s 3s forwards;
+        }
+
+        .loading-bar {
+            width: 0;
+            height: 20px;
+            background-color: red;
+            animation: load 3s 3s forwards;
+        }
+
+        .codes {
+            font-size: 1em;
+            margin-top: 20px;
+            opacity: 0;
+            white-space: pre-wrap;
+            text-align: left;
+            max-width: 80%;
+            animation: typewriter 3s 6s steps(40) forwards;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes load {
+            to { width: 100%; }
+        }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hacked">تم الاختراق بنجاح</div>
+    <div class="sending-data">جار إرسال البيانات الآن...</div>
+    <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+    </div>
+    <div class="codes">
+        01101000 01100001 01100011 01101011 01100101 01100100<br>
+        01100010 01111001 01110100 01100101 01110011<br>
+        01110011 01110100 01110010 01101001 01101110 01100111<br>
+        01011010 01100101 01110010 01101111 01110011<br>
+        01100001 01101110 01100100 01101111 01101110<br>
+    </div>
+</body>
+</html>
